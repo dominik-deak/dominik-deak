@@ -33,9 +33,3 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" alt="postgresql logo"  />
 </div>
-
-###
-
-<img src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/snake.svg" alt="Snake animation" />
-
-###
