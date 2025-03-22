@@ -19,25 +19,53 @@
 ###
 
 <div align="left">
-  <a href="https://www.javascript.com/" target="_blank" style="margin-right: 10px;">
+  <a 
+    href="https://www.javascript.com/"
+    target="_blank"
+    style="margin-right: 10px; color: transparent;"
+  >
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo" />
   </a>
-  <a href="https://www.typescriptlang.org/" target="_blank" style="margin-right: 10px;">
+  <a 
+    href="https://www.typescriptlang.org/"
+    target="_blank"
+    style="margin-right: 10px; color: transparent;"
+  >
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo" />
   </a>
-  <a href="https://nextjs.org/" target="_blank" style="margin-right: 10px;">
+  <a 
+    href="https://nextjs.org/"
+    target="_blank"
+    style="margin-right: 10px; color: transparent;"
+  >
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="40" alt="nextjs logo" />
   </a>
-  <a href="https://react.dev/" target="_blank" style="margin-right: 10px;">
+  <a 
+    href="https://react.dev/"
+    target="_blank"
+    style="margin-right: 10px; color: transparent;"
+  >
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo" />
   </a>
-  <a href="https://nodejs.org/en/" target="_blank" style="margin-right: 10px;">
+  <a 
+    href="https://nodejs.org/en/"
+    target="_blank"
+    style="margin-right: 10px; color: transparent;"
+  >
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="nodejs logo" />
   </a>
-  <a href="https://www.mongodb.com/" target="_blank" style="margin-right: 10px;">
+  <a 
+    href="https://www.mongodb.com/"
+    target="_blank"
+    style="margin-right: 10px; color: transparent;"
+  >
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="40" alt="mongodb logo" />
   </a>
-  <a href="https://www.postgresql.org/" target="_blank" style="margin-right: 10px;">
+  <a 
+    href="https://www.postgresql.org/"
+    target="_blank"
+    style="margin-right: 10px; color: transparent;"
+  >
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" alt="postgresql logo" />
   </a>
 </div>
