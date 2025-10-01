@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">My name is Dominik and I'm a passionate Software Engineer<br><br>My work account (with most of my contributions) -> <a href="https://github.com/dominik-zoro">dominik-zoro</a></p>
+<p align="left">My name is Dominik and I'm a passionate Software Engineer with 3+ years of experience.<br><br>My work account (with most of my contributions) -> <a href="https://github.com/dominik-zoro">dominik-zoro</a></p>
 
 ###
 
@@ -32,4 +32,8 @@
 
 ###
 
-<p align="left">~$ I've worked in the software industry as a developer for over 3 years. I also have a Bachelor of Science (BSc) Honours in Computer Science.<br><br>~$ I'm experienced with JavaScript, TypeScript; tools like Next.js, React, Node.js; as well as databases like MongoDB and PostgreSQL.<br><br>~$ My work experience as well as my project experience have equipped me with the skills to engineer robust software solutions.<br><br>~$ I'm a continuous learner, committed to staying abreast of emerging technologies, and I am eager to connect with professionals, mentors, and enthusiasts in the tech industry.</p>
+<p align="left">
+~$ I'm a highly driven Full Stack Software Engineer specializing in the modern JavaScript/TypeScript ecosystem to build robust and scalable software solutions.<br><br>
+~$ My core stack is React/Next.js on the frontend, paired with high-performance Node.js microservices on the backend. I'm experienced with both PostgreSQL (Relational) and MongoDB (NoSQL) database systems, and have foundational knowledge in AWS and CI/CD pipelines (Jenkins) from working closely with DevOps teams.<br><br>
+~$ I am a continuous learner, actively exploring emerging technologies and leveraging the latest AI-driven workflow enhancements to maximize development speed and quality. I'm eager to connect with professionals, mentors, and enthusiasts in the tech industry.
+</p>
