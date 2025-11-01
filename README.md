@@ -2,7 +2,12 @@
 
 ###
 
-<p align="left">My name is Dominik and I'm a passionate Software Engineer with 3+ years of experience.<br><br>My work account (with most of my contributions) -> <a href="https://github.com/dominik-zoro">dominik-zoro</a></p>
+<p align="left">My name is Dominik and I'm a passionate Software Engineer with 3+ years of experience.
+  <br><br>
+  My Personal Portfolio Website -> <a href="https://dominik-deak.netlify.app">https://dominik-deak.netlify.app</a>
+  <br><br>
+  My work account (with most of my contributions) -> <a href="https://github.com/dominik-zoro">dominik-zoro</a>
+</p>
 
 ###
 
