@@ -4,13 +4,15 @@
 
 <p align="left">My name is Dominik and I'm a passionate Software Engineer with 3+ years of experience.
   <br><br>
-  My Personal Portfolio Website -> <a href="https://dominik-deak.netlify.app">https://dominik-deak.netlify.app</a>
+  My Personal Portfolio Website -> <a href="https://dominik-deak.netlify.app">dominik-deak.netlify.app</a>
   <br><br>
-  My Codewars profile -> <a href="https://www.codewars.com/users/dominik-deak/">https://www.codewars.com/users/dominik-deak/</a>
+  My Codewars profile -> <a href="https://www.codewars.com/users/dominik-deak/">codewars.com/users/dominik-deak/</a>
   <br><br>
-  My LinkedIn profile (feel free to connect and reach out about opportunities) -> <a href="https://www.linkedin.com/in/dominik-deak/">https://www.linkedin.com/in/dominik-deak/</a>
+  My LinkedIn profile (feel free to connect and reach out about opportunities) -> <a href="https://www.linkedin.com/in/dominik-deak/">linkedin.com/in/dominik-deak/</a>
   <br><br>
   My work account (with most of my contributions) -> <a href="https://github.com/dominik-zoro">dominik-zoro</a>
+  <br><br>
+  Currently work at -> <a href="https://www.zoro.co.uk/">Zoro UK</a>
 </p>
 
 ###
