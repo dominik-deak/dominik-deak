@@ -9,10 +9,6 @@
   My Codewars profile -> <a href="https://www.codewars.com/users/dominik-deak/">codewars.com/users/dominik-deak/</a>
   <br><br>
   My LinkedIn profile (feel free to connect and reach out about opportunities) -> <a href="https://www.linkedin.com/in/dominik-deak/">linkedin.com/in/dominik-deak/</a>
-  <br><br>
-  My work account (with most of my contributions) -> <a href="https://github.com/dominik-zoro">dominik-zoro</a>
-  <br><br>
-  Currently work at -> <a href="https://www.zoro.co.uk/">Zoro UK</a>
 </p>
 
 ###
