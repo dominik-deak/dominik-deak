@@ -43,20 +43,21 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: stats
-          options: username=dominik-deak&hide=commits&show=contributions&hide_rank=true&card_width=495&disable_animations=true&border_radius=6&bg_color=03060a&title_color=00f0ff&text_color=cfe9f0&icon_color=39ff88&border_color=12303a
+          options: username=dominik-deak&hide=commits,contribs&show=contributions&hide_rank=true&card_width=495&disable_animations=true&border_radius=6&bg_color=03060a&title_color=00f0ff&text_color=cfe9f0&icon_color=39ff88&border_color=12303a
           path: dist/dark/stats.svg
-          # Optional read-only PAT so private contributions count; falls back to GITHUB_TOKEN when unset.
-          token: ${{ secrets.STATS_TOKEN }}
           fail_on_error: "true"
+          # Empty = use the lockfile-pinned core bundled with the action, not the latest 2.x from npm.
+          core_version: ""
 
       - name: Stats card (light)
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: stats
-          options: username=dominik-deak&hide=commits&show=contributions&hide_rank=true&card_width=495&disable_animations=true&border_radius=6&bg_color=fbfdfd&title_color=007c8c&text_color=1f2328&icon_color=137a42&border_color=cfe0e4
+          options: username=dominik-deak&hide=commits,contribs&show=contributions&hide_rank=true&card_width=495&disable_animations=true&border_radius=6&bg_color=fbfdfd&title_color=007c8c&text_color=1f2328&icon_color=137a42&border_color=cfe0e4
           path: dist/light/stats.svg
-          token: ${{ secrets.STATS_TOKEN }}
           fail_on_error: "true"
+          # Empty = use the lockfile-pinned core bundled with the action, not the latest 2.x from npm.
+          core_version: ""
 
       - name: Streak card (dark)
         uses: DenverCoder1/github-readme-streak-stats@125aaaf200620410446ebfa51897fca3607e04fd # v1.8.2
@@ -90,14 +91,23 @@ jobs:
 
       # Plain git instead of a third-party action, so no external code holds the write token.
       - name: Publish to the output branch
-        working-directory: dist
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Only dark/*.svg and light/*.svg may be published; anything else (dotfiles, links, nested dirs) fails the job.
+          bad=$( { find dist -mindepth 3
+                   find dist -mindepth 1 -name '.*'
+                   find dist -mindepth 1 ! -type d ! -type f
+                   find dist -mindepth 1 -maxdepth 1 ! -name dark ! -name light
+                   find dist -mindepth 1 -type f ! -path 'dist/dark/*.svg' ! -path 'dist/light/*.svg'; } )
+          if [ -n "$bad" ]; then echo "::error::Unexpected artifact content: $bad"; exit 1; fi
+          # Git metadata lives outside the artifact so nothing in it can configure git.
+          export GIT_DIR="$RUNNER_TEMP/output.git" GIT_WORK_TREE="$PWD/dist"
           git init -q -b output
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -q -m "chore: update profile assets"
           auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          echo "::add-mask::$auth"
           git -c http.extraheader="AUTHORIZATION: basic $auth" push -f "https://github.com/${GITHUB_REPOSITORY}.git" output
