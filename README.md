@@ -8,16 +8,13 @@
 <p>
   <a href="https://www.linkedin.com/in/dominik-deak/"><picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/link-linkedin.svg">
-    <img alt="LinkedIn" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/link-linkedin.svg" width="32%">
-  </picture></a>
+    <img alt="LinkedIn" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/link-linkedin.svg" width="32%"></picture></a>
   <a href="https://dominik-deak.netlify.app"><picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/link-portfolio.svg">
-    <img alt="Portfolio" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/link-portfolio.svg" width="32%">
-  </picture></a>
+    <img alt="Portfolio" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/link-portfolio.svg" width="32%"></picture></a>
   <a href="https://www.codewars.com/users/dominik-deak/"><picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/link-codewars.svg">
-    <img alt="Codewars" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/link-codewars.svg" width="32%">
-  </picture></a>
+    <img alt="Codewars" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/link-codewars.svg" width="32%"></picture></a>
 </p>
 
 <picture>
