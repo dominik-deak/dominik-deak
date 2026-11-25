@@ -43,7 +43,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: stats
-          options: username=dominik-deak&hide_rank=true&card_width=495&disable_animations=true&border_radius=6&bg_color=03060a&title_color=00f0ff&text_color=cfe9f0&icon_color=39ff88&border_color=12303a
+          options: username=dominik-deak&hide=commits&show=contributions&hide_rank=true&card_width=495&disable_animations=true&border_radius=6&bg_color=03060a&title_color=00f0ff&text_color=cfe9f0&icon_color=39ff88&border_color=12303a
           path: dist/dark/stats.svg
           # Optional read-only PAT so private contributions count; falls back to GITHUB_TOKEN when unset.
           token: ${{ secrets.STATS_TOKEN }}
@@ -53,7 +53,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         with:
           card: stats
-          options: username=dominik-deak&hide_rank=true&card_width=495&disable_animations=true&border_radius=6&bg_color=fbfdfd&title_color=007c8c&text_color=1f2328&icon_color=137a42&border_color=cfe0e4
+          options: username=dominik-deak&hide=commits&show=contributions&hide_rank=true&card_width=495&disable_animations=true&border_radius=6&bg_color=fbfdfd&title_color=007c8c&text_color=1f2328&icon_color=137a42&border_color=cfe0e4
           path: dist/light/stats.svg
           token: ${{ secrets.STATS_TOKEN }}
           fail_on_error: "true"
