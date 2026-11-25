@@ -1,36 +1,72 @@
-# Hi there 👋
+<!-- Images are built daily by .github/workflows/profile-assets.yml and published to the output branch -->
 
-My name is Dominik and I'm a passionate Software Engineer with 3+ years of experience.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/header.svg">
+  <img alt="Dominik Deak, software engineer: AI agents, LLMs and RAG, full-stack TypeScript" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/header.svg" width="100%">
+</picture>
 
-My LinkedIn profile -> [linkedin.com/in/dominik-deak/](https://www.linkedin.com/in/dominik-deak/)
+<p>
+  <a href="https://www.linkedin.com/in/dominik-deak/"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/link-linkedin.svg">
+    <img alt="LinkedIn" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/link-linkedin.svg" width="32%">
+  </picture></a>
+  <a href="https://dominik-deak.netlify.app"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/link-portfolio.svg">
+    <img alt="Portfolio" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/link-portfolio.svg" width="32%">
+  </picture></a>
+  <a href="https://www.codewars.com/users/dominik-deak/"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/link-codewars.svg">
+    <img alt="Codewars" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/link-codewars.svg" width="32%">
+  </picture></a>
+</p>
 
-My Personal Portfolio Website -> [dominik-deak.netlify.app](https://dominik-deak.netlify.app)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/section-01.svg">
+  <img alt="Stack" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/section-01.svg" width="100%">
+</picture>
 
-My Codewars profile -> [codewars.com/users/dominik-deak/](https://www.codewars.com/users/dominik-deak/)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/stack.svg">
+  <img alt="Stack. AI: AI Agents, LLMs, RAG. Platform: JS/TS, React, Node.js, AWS." src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/stack.svg" width="100%">
+</picture>
 
-## 🛠 I work with
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/section-02.svg">
+  <img alt="About" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/section-02.svg" width="100%">
+</picture>
 
-<!-- Languages -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/about.svg">
+  <img alt="Software engineer focused on AI agents, LLMs and RAG, on a full-stack TypeScript foundation. Building agents and retrieval pipelines on top of LLMs, and using AI-assisted workflows to ship faster. Full-stack across the JavaScript/TypeScript ecosystem: React on the front end, Node.js services behind it, AWS underneath. Always learning. Happy to talk shop with engineers, mentors and fellow tinkerers." src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/about.svg" width="100%">
+</picture>
 
-<div>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo" style="margin-right: 10px;" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo" style="margin-right: 10px;" />
-  <!-- Frontend -->
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo" style="margin-right: 10px;" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="40" alt="nextjs logo" style="margin-right: 10px;" />
-  <!-- Backend -->
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="nodejs logo" style="margin-right: 10px;" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-line-wordmark.svg" height="40" alt="amazonwebservices logo" style="margin-right: 10px;" />
-  <!-- Databases -->
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="postgresql logo" style="margin-right: 10px;" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="40" alt="mongodb logo" style="margin-right: 10px;" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" height="40" alt="postgresql logo" style="margin-right: 10px;" />
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/section-03.svg">
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/section-03.svg" width="100%">
+</picture>
 
-## 👩‍💻 About Me
+<p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/stats.svg">
+    <img alt="GitHub stats card" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/stats.svg" width="49%">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/streak.svg">
+    <img alt="GitHub contribution streak" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/streak.svg" width="49%">
+  </picture>
+</p>
 
-~ $ I'm a highly driven Full Stack Software Engineer specializing in the modern JavaScript/TypeScript ecosystem to build robust and scalable software solutions.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/section-04.svg">
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/section-04.svg" width="100%">
+</picture>
 
-~ $ My core stack is React/Next.js on the frontend, paired with high-performance Node.js microservices on the backend. I'm experienced with both PostgreSQL (Relational) and MongoDB (NoSQL) database systems, and have foundational knowledge in AWS and CI/CD pipelines (Jenkins) from working closely with DevOps teams.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/snake.svg">
+  <img alt="Snake eating the contribution graph" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/snake.svg" width="100%">
+</picture>
 
-~ $ I am a continuous learner, actively exploring emerging technologies and leveraging the latest AI-driven workflow enhancements to maximize development speed and quality. I'm eager to connect with professionals, mentors, and enthusiasts in the tech industry.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/dark/footer.svg">
+  <img alt="" src="https://raw.githubusercontent.com/dominik-deak/dominik-deak/output/light/footer.svg" width="100%">
+</picture>
