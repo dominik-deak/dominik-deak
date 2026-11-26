@@ -1,0 +1,113 @@
+name: Profile assets
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "assets/**"
+      - "scripts/**"
+      - ".github/workflows/profile-assets.yml"
+
+permissions: {}
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Build header, stack, section and link SVGs
+        run: node scripts/build-assets.mjs
+
+      - name: Snake
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
+        with:
+          github_user_name: dominik-deak
+          outputs: |
+            dist/dark/snake.svg?color_snake=#00f0ff&color_dots=#0d1b22,#0e4a32,#178a52,#25c46e,#39ff88
+            dist/light/snake.svg?color_snake=#007c8c&color_dots=#ebf1f2,#b6e8c9,#6fd39a,#2fae66,#137a42
+
+      - name: Stats card (dark)
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: stats
+          options: username=dominik-deak&hide=commits,contribs&show=contributions&hide_rank=true&card_width=495&disable_animations=true&border_radius=6&bg_color=03060a&title_color=00f0ff&text_color=cfe9f0&icon_color=39ff88&border_color=12303a
+          path: dist/dark/stats.svg
+          fail_on_error: "true"
+          # Empty = use the lockfile-pinned core bundled with the action, not the latest 2.x from npm.
+          core_version: ""
+
+      - name: Stats card (light)
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: stats
+          options: username=dominik-deak&hide=commits,contribs&show=contributions&hide_rank=true&card_width=495&disable_animations=true&border_radius=6&bg_color=fbfdfd&title_color=007c8c&text_color=1f2328&icon_color=137a42&border_color=cfe0e4
+          path: dist/light/stats.svg
+          fail_on_error: "true"
+          # Empty = use the lockfile-pinned core bundled with the action, not the latest 2.x from npm.
+          core_version: ""
+
+      - name: Streak card (dark)
+        uses: DenverCoder1/github-readme-streak-stats@125aaaf200620410446ebfa51897fca3607e04fd # v1.8.2
+        with:
+          options: user=dominik-deak&disable_animations=true&background=03060a&border=12303a&stroke=12303a&ring=39ff88&fire=39ff88&currStreakNum=f0fdff&sideNums=f0fdff&currStreakLabel=39ff88&sideLabels=cfe9f0&dates=6f97a3
+          path: dist/dark/streak.svg
+
+      - name: Streak card (light)
+        uses: DenverCoder1/github-readme-streak-stats@125aaaf200620410446ebfa51897fca3607e04fd # v1.8.2
+        with:
+          options: user=dominik-deak&disable_animations=true&background=fbfdfd&border=cfe0e4&stroke=cfe0e4&ring=137a42&fire=137a42&currStreakNum=0b1215&sideNums=0b1215&currStreakLabel=137a42&sideLabels=1f2328&dates=57707a
+          path: dist/light/streak.svg
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: profile-assets
+          path: dist/
+          retention-days: 1
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: profile-assets
+          path: dist
+
+      # Plain git instead of a third-party action, so no external code holds the write token.
+      - name: Publish to the output branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Only dark/*.svg and light/*.svg may be published; anything else (dotfiles, links, nested dirs) fails the job.
+          bad=$( { find dist -mindepth 3
+                   find dist -mindepth 1 -name '.*'
+                   find dist -mindepth 1 ! -type d ! -type f
+                   find dist -mindepth 1 -maxdepth 1 ! -name dark ! -name light
+                   find dist -mindepth 1 -type f ! -path 'dist/dark/*.svg' ! -path 'dist/light/*.svg'; } )
+          if [ -n "$bad" ]; then echo "::error::Unexpected artifact content: $bad"; exit 1; fi
+          # Git metadata lives outside the artifact so nothing in it can configure git.
+          export GIT_DIR="$RUNNER_TEMP/output.git" GIT_WORK_TREE="$PWD/dist"
+          git init -q -b output
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "chore: update profile assets"
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          echo "::add-mask::$auth"
+          git -c http.extraheader="AUTHORIZATION: basic $auth" push -f "https://github.com/${GITHUB_REPOSITORY}.git" output
